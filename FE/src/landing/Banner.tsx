@@ -1,8 +1,5 @@
-import Image from '../../public/images/Banner.jpg';
 import { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import ReactPlayer from 'react-player';
-import './Banner.scss';
 
 const Banner: React.FC = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -17,20 +14,17 @@ const Banner: React.FC = () => {
 
   return (
     <div style={{ marginTop: '56px' }}>
-      <CSSTransition in={!showVideo} timeout={300} classNames='fade' unmountOnExit>
-        <img src={Image} alt='Gallery Image' onClick={handleClick} />
-      </CSSTransition>
-      <CSSTransition in={showVideo} timeout={300} classNames='fade' unmountOnExit>
-        <div>
-          <ReactPlayer
-            url='video/1.mp4'
-            playing
-            width='100%'
-            height='100%'
-            onEnded={() => handleVideoEnd()}
-          />
-        </div>
-      </CSSTransition>
+      {showVideo ? (
+        <ReactPlayer
+          url='video/1.mp4'
+          playing
+          width='100%'
+          height='100%'
+          onEnded={() => handleVideoEnd()}
+        />
+      ) : (
+        <img src='/images/Banner.jpg' alt='Gallery Image' onClick={handleClick} />
+      )}
     </div>
   );
 };
