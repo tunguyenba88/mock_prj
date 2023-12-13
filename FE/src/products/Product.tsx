@@ -18,7 +18,13 @@ const Product: FC<Props> = ({ movie }: Props) => {
     <div className='col'>
       <div className='card shadow-sm'>
         <Link to={`/products/${movie.id}`} replace>
-          <img className='card-img-top bg-dark' height='200' alt='' src={`images/${movie.image}`} />
+          <img
+            className='card-img-top bg-dark'
+            loading='lazy'
+            height='200'
+            alt=''
+            src={`images/${movie.image}`}
+          />
         </Link>
         <div className='card-body'>
           <h5 className='card-title text-center text-dark text-truncate'>{movie.name}</h5>

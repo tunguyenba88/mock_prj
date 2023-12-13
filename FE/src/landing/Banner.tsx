@@ -1,63 +1,37 @@
-import BannerZero from "./banner-0.jpg";
-import BannerOne from "./banner-1.jpg";
-import BannerTwo from "./banner-2.jpg";
+import Image from '../../public/images/Banner.jpg';
+import { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import ReactPlayer from 'react-player';
+import './Banner.scss';
 
-function BannerIncidator(props) {
-  return (
-    <button
-      type="button"
-      data-bs-target="#bannerIndicators"
-      data-bs-slide-to={props.index}
-      className={props.active ? "active" : ""}
-      aria-current={props.active}
-    />
-  );
-}
+const Banner: React.FC = () => {
+  const [showVideo, setShowVideo] = useState(false);
 
-function BannerImage(props) {
+  const handleVideoEnd = () => {
+    console.log('test');
+    setShowVideo(false);
+  };
+  const handleClick = () => {
+    setShowVideo(true);
+  };
+
   return (
-    <div
-      className={"carousel-item " + (props.active ? "active" : "")}
-      data-bs-interval="5000"
-    >
-      <div
-        className="ratio"
-        style={{ "--bs-aspect-ratio": "50%", maxHeight: "460px" }}
-      >
-        <img
-          className="d-block w-100 h-100 bg-dark cover"
-          alt=""
-          src={props.image}
-        />
-      </div>
-      <div className="carousel-caption d-none d-lg-block">
-        <h5>Banner Header</h5>
-        <p>Some representative placeholder content for the banner.</p>
-      </div>
+    <div style={{ marginTop: '56px' }}>
+      <CSSTransition in={!showVideo} timeout={300} classNames='fade' unmountOnExit>
+        <img src={Image} alt='Gallery Image' onClick={handleClick} />
+      </CSSTransition>
+      <CSSTransition in={showVideo} timeout={300} classNames='fade' unmountOnExit>
+        <div>
+          <ReactPlayer
+            url='video/1.mp4'
+            playing
+            width='100%'
+            height='100%'
+            onEnded={() => handleVideoEnd()}
+          />
+        </div>
+      </CSSTransition>
     </div>
   );
-}
-
-function Banner() {
-  return (
-    <div
-      id="bannerIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-      style={{ marginTop: "56px" }}
-    >
-      <div className="carousel-indicators">
-        <BannerIncidator index="0" active={true} />
-        <BannerIncidator index="1" />
-        <BannerIncidator index="2" />
-      </div>
-      <div className="carousel-inner">
-        <BannerImage image={BannerZero} active={true} />
-        <BannerImage image={BannerOne} />
-        <BannerImage image={BannerTwo} />
-      </div>
-    </div>
-  );
-}
-
+};
 export default Banner;

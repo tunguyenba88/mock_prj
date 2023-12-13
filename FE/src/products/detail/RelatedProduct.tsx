@@ -13,6 +13,7 @@ const RelatedProduct: FC<RelatedProductProps> = ({ movie }) => {
         <img
           className='card-img-top bg-dark'
           height='200'
+          loading='lazy'
           alt=''
           src={`../images/${movie.image}`}
         />

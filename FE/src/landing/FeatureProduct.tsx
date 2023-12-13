@@ -10,7 +10,13 @@ const FeatureProduct: FC<Props> = ({ movie }: Props) => {
   return (
     <div className='col'>
       <div className='card shadow-sm'>
-        <img className='card-img-top bg-dark' height='240' alt='' src={`images/${movie.image}`} />
+        <img
+          className='card-img-top bg-dark'
+          loading='lazy'
+          height='240'
+          alt=''
+          src={`images/${movie.image}`}
+        />
         <div className='card-body'>
           <h5 className='card-title text-center'>{movie.name}</h5>
           <p className='card-text text-center text-muted'>{movie.price}$</p>
