@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Avatar",
+    "price": 9,
+    "type": ["Comedy", "Action"],
+    "actor": ["Zoe Saldana", "Sigourney Weaver", "Michelle Rodriguez", "Giovanni Ribisi"],
+    "ratings": 4.1,
+    "year": 2009,
+    "view": 100,
+    "image": "1.jpeg",
+    "description": "The story focuses on an epic conflict on Pandora, an inhabited Earth-sized moon of Polyphemus, one of three gas giants orbiting Alpha Centauri A."
+  },
+  {
+    "id": 2,
+    "name": "Avatar 2",
+    "price": 8,
+    "type": ["Drama"],
+    "actor": ["Zoe Saldana"],
+    "ratings": 3.5,
+    "year": 2023,
+    "view": 200,
+    "image": "2.jpeg",
+    "description": "Set over a decade after the events of the first film, The Way of Water focuses on the return of the RDA, which prompts Jake's family to seek refuge in the water regions of Pandora in an effort to keep one another safe."
+  },
+  {
+    "id": 3,
+    "name": "Lord of the ring",
+    "price": 9,
+    "type": ["Comedy", "Drama"],
+    "actor": ["Giovanni Ribisi"],
+    "ratings": 3.8,
+    "year": 2001,
+    "view": 900,
+    "image": "3.jpeg",
+    "description": "Bilbo celebrates his eleventy-first (111th) birthday and leaves the Shire suddenly, passing the Ring to Frodo Baggins, his cousin[e] and heir. Neither Hobbit is aware of the Ring's origin, but the wizard Gandalf suspects it is a Ring of Power."
+  },
+  {
+    "id": 4,
+    "name": "Avenger",
+    "price": 9,
+    "type": ["Action"],
+    "actor": ["Zoe Saldana", "Michelle Rodriguez", "Giovanni Ribisi"],
+    "ratings": 4.5,
+    "year": 2012,
+    "view": 800,
+    "image": "4.jpeg",
+    "description": "In 2018, twenty-three days after Thanos erased half of all life in the universe,[a] Carol Danvers rescues Tony Stark and Nebula from deep space and they reunite with the remaining Avengers—Bruce Banner, Steve Rogers, Thor, Natasha Romanoff, and James Rhodes—and Rocket on Earth. Locating Thanos on an uninhabited planet, they plan to use the Infinity Stones to reverse his Comedys, only to find that Thanos has already destroyed them and the Gauntlet, thus preventing any further use. Enraged, Thor decapitates Thanos."
+  },
+  {
+    "id": 5,
+    "name": "Iron Man",
+    "price": 9,
+    "type": ["Comedy", "Drama"],
+    "actor": ["Zoe Saldana", "Sigourney Weaver", "Giovanni Ribisi"],
+    "ratings": 4.8,
+    "year": 2008,
+    "view": 500,
+    "image": "5.jpeg",
+    "description": "Iron Man is a superhero appearing in American comic books published by Marvel Comics. Co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby, the character first appeared in Tales of Suspense #39 in 1963, and received his own title with Iron Man #1 in 1968."
+  },
+  {
+    "id": 6,
+    "name": "Thor",
+    "price": 9,
+    "type": ["Comedy", "Biography"],
+    "actor": ["Zoe Saldana", "Sigourney Weaver", "Michelle Rodriguez"],
+    "ratings": 4.0,
+    "year": 2011,
+    "view": 10,
+    "image": "6.jpeg",
+    "description": "n 965 AD, Odin, king of Asgard, wages war against the Frost Giants of Jotunheim and their leader Laufey, to prevent them from conquering the Nine Realms, starting with Earth. The Asgardians defeated the Frost Giants and seize the source of their power, the Casket of Ancient Winters."
+  },
+  {
+    "id": 7,
+    "name": "Loki",
+    "price": 9,
+    "type": ["Comedy", "Adventure"],
+    "actor": ["Sigourney Weaver", "Michelle Rodriguez", "Giovanni Ribisi"],
+    "ratings": 3.2,
+    "year": 2021,
+    "view": 2000,
+    "image": "7.jpeg",
+    "description": "After stealing the Tesseract during the events of Avengers: Endgame (2019), an alternate version of Loki is brought to the mysterious Time Variance Authority (TVA), a bureaucratic organization that exists outside of time and space and monitors the timeline."
+  }
+]
