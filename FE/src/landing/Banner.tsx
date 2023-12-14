@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
+import './Banner.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Banner: React.FC = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   const handleVideoEnd = () => {
     console.log('test');
     setShowVideo(false);
+    setShowButton(true);
   };
   const handleClick = () => {
     setShowVideo(true);
+  };
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/products');
   };
 
   return (
@@ -24,12 +33,25 @@ const Banner: React.FC = () => {
           onEnded={() => handleVideoEnd()}
         />
       ) : (
-        <img
-          style={{ width: '100%', height: '100%' }}
-          src='/images/Banner.jpg'
-          alt='Gallery Image'
-          onClick={handleClick}
-        />
+        <div className='banner'>
+          <button className='btn-img'>
+            <img
+              style={{ width: '100%', height: '100%' }}
+              src='/images/Banner.jpg'
+              alt='Gallery Image'
+              onClick={handleClick}
+            />
+          </button>
+          {showButton && (
+            <button
+              type='button'
+              className='btn btn-secondary btn-lg center'
+              onClick={handleNavigate}
+            >
+              Buy Now
+            </button>
+          )}
+        </div>
       )}
     </div>
   );
