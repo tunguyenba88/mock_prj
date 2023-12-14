@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Banner from './Banner';
 import FeatureProduct from './FeatureProduct';
 import ScrollToTopOnMount from '../template/ScrollToTopOnMount';
@@ -12,8 +12,8 @@ import { ProductType } from '../types/product.type';
 const Landing: FC = () => {
   const dispatch = useDispatch();
   const data = useSelector((state: any) => state.post.data);
-  const loading = useSelector((state: any) => state.post.loading);
-  const error = useSelector((state: any) => state.post.error);
+  // const loading = useSelector((state: any) => state.post.loading);
+  // const error = useSelector((state: any) => state.post.error);
 
   useEffect(() => {
     dispatch(getListPost());
@@ -44,13 +44,13 @@ const Landing: FC = () => {
       <div className='d-flex flex-column bg-white py-4'>
         <h5 className='text-center mb-3'>Follow us on</h5>
         <div className='d-flex justify-content-center'>
-          <a href='!#' className='me-3'>
+          <a className='me-3'>
             <FontAwesomeIcon icon={['fab', 'facebook']} size='2x' />
           </a>
-          <a href='!#'>
+          <a>
             <FontAwesomeIcon icon={['fab', 'instagram']} size='2x' />
           </a>
-          <a href='!#' className='ms-3'>
+          <a className='ms-3'>
             <FontAwesomeIcon icon={['fab', 'twitter']} size='2x' />
           </a>
         </div>

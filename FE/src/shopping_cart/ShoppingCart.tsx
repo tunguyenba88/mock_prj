@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import ScrollToTopOnMount from '../template/ScrollToTopOnMount';
 import './index.scss';
 import { useDispatch } from 'react-redux';

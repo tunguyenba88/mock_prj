@@ -16,6 +16,7 @@ const Banner: React.FC = () => {
     <div style={{ marginTop: '56px' }}>
       {showVideo ? (
         <ReactPlayer
+          id='react-player'
           url='video/1.mp4'
           playing
           width='100%'
@@ -23,7 +24,12 @@ const Banner: React.FC = () => {
           onEnded={() => handleVideoEnd()}
         />
       ) : (
-        <img src='/images/Banner.jpg' alt='Gallery Image' onClick={handleClick} />
+        <img
+          style={{ width: '100%', height: '100%' }}
+          src='/images/Banner.jpg'
+          alt='Gallery Image'
+          onClick={handleClick}
+        />
       )}
     </div>
   );
