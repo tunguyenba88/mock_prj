@@ -22,7 +22,7 @@ const Banner: React.FC = () => {
   };
 
   return (
-    <div style={{ marginTop: '56px' }}>
+    <div className='banner'>
       {showVideo ? (
         <ReactPlayer
           id='react-player'
@@ -33,7 +33,7 @@ const Banner: React.FC = () => {
           onEnded={() => handleVideoEnd()}
         />
       ) : (
-        <div className='banner'>
+        <div>
           <button className='btn-img'>
             <img
               style={{ width: '100%', height: '100%' }}

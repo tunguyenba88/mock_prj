@@ -1,11 +1,11 @@
 export interface ProductType {
-  id: string;
+  id: number;
   price: number;
   rating: number;
   name: string;
   description: string;
-  type: [];
-  actor: [];
+  type: Array<string>;
+  actor: Array<string>;
   image: string;
   year: number;
   view: number;
