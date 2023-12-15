@@ -24,14 +24,10 @@ test('renders FeatureProduct component with correct content', () => {
     </BrowserRouter>
   );
 
-  // Assert that the component renders the movie name, price, and detail link
   expect(screen.getByText('Mock Movie')).toBeInTheDocument();
   expect(screen.getByText('10$')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /Detail/i })).toBeInTheDocument();
 
-  // Assert that the image has the correct source
   const image = screen.getByAltText('');
   expect(image).toBeInTheDocument();
 });
-
-// Add more tests based on your component's behavior
