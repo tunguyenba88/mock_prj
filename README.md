@@ -11,4 +11,4 @@ cd api
 
 npm install 
 
-npm run dev
+npm start
